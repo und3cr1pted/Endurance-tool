@@ -10,8 +10,8 @@ public class Main {
 		int choice1;
 		
 		String project_directory = new File(".").getCanonicalPath().replace("\\", "/");		
-		String shutdown_cmd = project_directory + "/" + "shutdown.cmd";	
-		String plankerton_w5_cmd = project_directory + "/" + "Plankerton_wave_5.cmd";
+		String shutdown_cmd = project_directory + "/" + "cmd files/shutdown.cmd";	
+		String plankerton_w5_cmd = project_directory + "/" + "cmd files/Plankerton_wave_5.cmd";
 			
 		while (true) {
 			
@@ -49,7 +49,7 @@ public class Main {
 		Thread.sleep(1000);
 
 		System.out.println("Shutdown in 2 hours and 35 minutes" + '\n');
-		//new ProcessBuilder("cmd", "/c", shutdown_cmd).start();
+		new ProcessBuilder("cmd", "/c", shutdown_cmd).start();
 		System.out.println("[debug] shutdown.cmd located at --> " + shutdown_cmd + '\n'); //debug
 		
 		
@@ -66,9 +66,9 @@ public class Main {
 			System.out.println("Choice: Plankerton" + '\n');
 			
 			int delay1 = (13 * 60 + 40) * 1000;
-			Thread.sleep(delay1);			
+			Thread.sleep(2000);			
 			
-		//	new ProcessBuilder("cmd", "/c", plankerton_w5_cmd).start();
+			new ProcessBuilder("cmd", "/c", plankerton_w5_cmd).start();
 			System.out.println("Wave 5 (Ufo-Modifier)");
 			System.out.println("[debug] Plankerton_wave_5.cmd located at --> " + plankerton_w5_cmd); //debug
 			
