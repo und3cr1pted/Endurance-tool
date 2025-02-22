@@ -1,0 +1,2 @@
+# Shutdown
+Stop-Computer -Force
